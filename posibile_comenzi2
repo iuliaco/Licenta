@@ -1,0 +1,8 @@
+ 1248  npm run build
+ 1249  npm run dev
+ 1406  npm run build
+ 1407  npm run dev
+ 1474  npm build
+ 1475  npm run build
+ 1476  npm run dev
+ 2066  history | grep npm > posibile_comenzi2

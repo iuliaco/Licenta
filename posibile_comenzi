@@ -1,0 +1,143 @@
+ 1101  php artisan migrate
+ 1550  php artisan make:model IataCodes --migration
+ 1551  php artisan migrate fresh
+ 1552  php artisan migrate 
+ 1553  php artisan make:seeder IataSeeder
+ 1554  php artisan db:seed --class=IataSeeder
+ 1555  php artisan migrate 
+ 1556  php artisan migrate:fresh
+ 1557  php artisan migrate 
+ 1558  php artisan db:seed --class=IataSeeder
+ 1559  php artisan migrate:fresh
+ 1560  php artisan db:seed --class=IataSeeder
+ 1561  php artisan migrate:fresh
+ 1562  php artisan db:seed --class=IataSeeder
+ 1563  php artisan migrate:fresh
+ 1564  php artisan db:seed --class=IataSeeder
+ 1565  php artisan migrate:fresh
+ 1566  php artisan db:seed --class=IataSeeder
+ 1567  php artisan migrate:fresh
+ 1568  php artisan db:seed --class=IataSeeder
+ 1569  php artisan migrate:fresh
+ 1570  php artisan db:seed --class=IataSeeder
+ 1571  php artisan migrate:fresh
+ 1572  php artisan db:seed --class=IataSeeder
+ 1573  php artisan migrate:fresh
+ 1574  php artisan db:seed --class=IataSeeder
+ 1575  php artisan migrate:fresh
+ 1576  php artisan db:seed --class=IataSeeder
+ 1577  php artisan migrate:fresh
+ 1578  php artisan db:seed --class=IataSeeder
+ 1579  php artisan migrate:fresh
+ 1580  php artisan db:seed --class=IataSeeder
+ 1581  php artisan migrate:fresh
+ 1582  php artisan db:seed --class=IataSeeder
+ 1583  php artisan migrate:fresh
+ 1584  php artisan db:seed --class=IataSeeder
+ 1585  php artisan migrate:fresh
+ 1586  php artisan db:seed --class=IataSeeder
+ 1587  php artisan migrate:fresh
+ 1588  php artisan db:seed --class=IataSeeder
+ 1589  php artisan migrate:fresh
+ 1590  php artisan db:seed --class=IataSeeder
+ 1591  php artisan migrate:fresh
+ 1592  php artisan db:seed --class=IataSeeder
+ 1593  php artisan migrate:fresh
+ 1594  php artisan db:seed --class=IataSeeder
+ 1595  php artisan migrate:fresh
+ 1596  php artisan db:seed --class=IataSeeder
+ 1597  php artisan migrate:fresh
+ 1598  php artisan db:seed --class=IataSeeder
+ 1599  php artisan migrate:fresh
+ 1600  php artisan db:seed --class=IataSeeder
+ 1601  php artisan migrate:fresh
+ 1602  php artisan db:seed --class=IataSeeder
+ 1603  php artisan migrate:fresh
+ 1604  php artisan db:seed --class=IataSeeder
+ 1605  php artisan migrate:fresh
+ 1606  php artisan db:seed --class=IataSeeder
+ 1607  php artisan migrate:fresh
+ 1608  php artisan db:seed --class=IataSeeder
+ 1609  php artisan migrate:fresh
+ 1610  php artisan db:seed --class=IataSeeder
+ 1611  php artisan migrate:fresh
+ 1612  php artisan db:seed --class=IataSeeder
+ 1613  php artisan migrate:fresh
+ 1614  php artisan db:seed --class=IataSeeder
+ 1615  php artisan migrate:fresh
+ 1616  php artisan db:seed --class=IataSeeder
+ 1617  php artisan migrate:fresh
+ 1618  php artisan db:seed --class=IataSeeder
+ 1619  php artisan migrate:fresh
+ 1620  php artisan db:seed --class=IataSeeder
+ 1621  php artisan migrate:fresh
+ 1622  php artisan db:seed --class=IataSeeder
+ 1623  php artisan migrate:fresh
+ 1624  php artisan db:seed --class=IataSeeder
+ 1625  php artisan migrate:fresh
+ 1626  php artisan db:seed --class=IataSeeder
+ 1627  php artisan migrate:fresh
+ 1628  php artisan db:seed --class=IataSeeder
+ 1629  php artisan migrate:fresh
+ 1630  php artisan db:seed --class=IataSeeder
+ 1631  php artisan migrate:fresh
+ 1632  php artisan db:seed --class=IataSeeder
+ 1633  php artisan migrate:fresh
+ 1634  php artisan db:seed --class=IataSeeder
+ 1635  php artisan migrate:fresh
+ 1636  php artisan db:seed --class=IataSeeder
+ 1637  php artisan migrate:fresh
+ 1638  php artisan db:seed --class=IataSeeder
+ 1639  php artisan migrate:fresh
+ 1640  php artisan db:seed --class=IataSeeder
+ 1641  php artisan migrate:fresh
+ 1642  php artisan db:seed --class=IataSeeder
+ 1643  php artisan migrate:fresh
+ 1644  php artisan db:seed --class=IataSeeder
+ 1645  php artisan migrate:fresh
+ 1646  php artisan db:seed --class=IataSeeder
+ 1647  php artisan migrate:fresh
+ 1648  php artisan db:seed --class=IataSeeder
+ 1649  php artisan migrate:fresh
+ 1650  php artisan db:seed --class=IataSeeder
+ 1651  php artisan migrate:fresh
+ 1652  php artisan db:seed --class=IataSeeder
+ 1653  php artisan migrate:fresh
+ 1654  php artisan db:seed --class=IataSeeder
+ 1655  php artisan migrate:fresh
+ 1656  php artisan db:seed --class=IataSeeder
+ 1657  php artisan migrate:fresh
+ 1658  php artisan db:seed --class=IataSeeder
+ 1659  php artisan migrate:fresh
+ 1660  php artisan db:seed --class=IataSeeder
+ 1661  php artisan migrate:fresh
+ 1662  php artisan db:seed --class=IataSeeder
+ 1663  php artisan migrate:fresh
+ 1664  php artisan db:seed --class=IataSeeder
+ 1665  php artisan migrate:fresh
+ 1666  php artisan db:seed --class=IataSeeder
+ 1667  php artisan migrate:fresh
+ 1668  php artisan db:seed --class=IataSeeder
+ 1669  php artisan migrate:fresh
+ 1670  php artisan db:seed --class=IataSeeder
+ 1671  php artisan migrate:fresh
+ 1672  php artisan db:seed --class=IataSeeder
+ 1673  php artisan migrate:fresh
+ 1674  php artisan db:seed --class=IataSeeder
+ 1675  php artisan migrate:fresh
+ 1676  php artisan db:seed --class=IataSeeder
+ 1677  php artisan migrate:fresh
+ 1678  php artisan db:seed --class=IataSeeder
+ 1679  php artisan make:model Trip --migration
+ 1680  php artisan make:model Country --migration
+ 1681  php artisan make:seeder CountrySeeder
+ 1682  php artisan migrate
+ 1683  php artisan make:seeder CountrySeeder
+ 1684  php artisan db:seed --class=Seeder
+ 1685  php artisan db:seed --class=CountrySeeder
+ 1686  php artisan migrate:fresh
+ 1687  php artisan make:seeder UserSeeder
+ 1688  php artisan migrate:fresh
+ 1689  php artisan db:seed --class=DatabaseSeeder
+ 2064  history | grep artisan
+ 2065  history | grep artisan > posibile_comenzi

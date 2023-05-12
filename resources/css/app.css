@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { font-family: 'Roboto', sans-serif; }
+MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-xjhuq2-MuiInputBase-root-MuiFilledInput-root {
+    border-color: aqua!important;
+}
+MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMultiline css-1saaeo1-MuiInputBase-input-MuiFilledInput-input{
+    outline: 0;
+}
+
+.css-10kartz-MuiInputBase-input-MuiOutlinedInput-input {
+    outline: 0!important;
+    box-shadow: none!important;
+    outline-offset: 0!important;
+
+}
+
+fieldset{
+    outline: 0!important;
+    box-shadow: none!important;
+}
+
+
+textarea:focus{
+    outline: 0!important;
+    box-shadow: none!important;
+}
+
+.map-container {
+    height: 700px;
+    }
+     
+    .sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 4px;
+    }
