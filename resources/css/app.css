@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,body,#app{
+    min-height: 100%;
+}
+
 html { font-family: 'Roboto', sans-serif; }
 MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-xjhuq2-MuiInputBase-root-MuiFilledInput-root {
     border-color: aqua!important;

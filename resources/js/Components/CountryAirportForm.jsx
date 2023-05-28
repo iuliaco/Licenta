@@ -21,17 +21,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CountryAirportForm(props) {
     const { data, setData, post, processing, errors, reset } = useForm({
-        country_id_from: '',
-        iata_code_from: '',
-        country_id_to: '',
-        iata_code_to: '',
-        amount: ''
+        country_id_from: props.currentCountryFrom? props.currentCountryFrom : '',
+        iata_code_from: props.iataCodeFrom? props.iataCodeFrom : '',
+        country_id_to: props.currentCountryTo? props.currentCountryTo : '',
+        iata_code_to: props.iataCodeTo? props.iataCodeTo : '',
+        amount: props.amount? props.amount : '',
+        date: props.date? props.date : '',
     });
 
-    const [currentCountryFrom, setCurrentCountryFrom] = useState(0);
+    const [currentCountryFrom, setCurrentCountryFrom] = useState(props.currentCountryFrom? props.currentCountryFrom : 0);
     const [iataCodesFrom, setIataCodesFrom] = useState([]);
-    const [currentCountryTo, setCurrentCountryTo] = useState(0);
+    const [currentCountryTo, setCurrentCountryTo] = useState(props.currentCountryTo? props.currentCountryTo : 0);
     const [iataCodesTo, setIataCodesTo] = useState([]);
+    const [goodPrice, setGoodPrice] = useState();
     const classes = useStyles();
 
     useEffect(() => {
@@ -72,6 +74,9 @@ export default function CountryAirportForm(props) {
 
     }, [currentCountryTo]);
 
+    useEffect(() => {
+        console.log(props);
+    });
     
     const handleChange = (event) => {
         setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
@@ -89,7 +94,7 @@ export default function CountryAirportForm(props) {
 
         event.preventDefault();
         console.log(event);
-        post(route('city.safety'));
+        post(route('flight.price'));
     
     };
     
@@ -185,6 +190,13 @@ export default function CountryAirportForm(props) {
                     label="Amount"
                 />
                 </FormControl>
+                <TextField
+                    helperText="The date of your flight as YYYY-MM-DD"
+                    value={data.date}
+                    name='date'
+                    onChange={handleChange}
+                    
+                />
                 <ValidationErrors errors={errors} />
                 </Stack>
                 </CardContent>
@@ -196,7 +208,7 @@ export default function CountryAirportForm(props) {
                 </CardActions>
             </form>
         </Card>
-        <GoodPriceTable />
+        {props.finalObject &&    <GoodPriceTable price={props.finalObject} />}
         </>
     );
 }

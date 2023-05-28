@@ -20,12 +20,14 @@ return new class extends Migration
             $table->text("hotel")->nullable();
             $table->text("transport")->nullable();
             $table->unsignedBigInteger('trip_id');
+            $table->unsignedBigInteger('city_id');
             $table->string("description")->nullable();
             $table->text("liked")->nullable();
             $table->text("disliked")->nullable();
             $table->unsignedTinyInteger('rated')->nullable();
             $table->timestamps();
             $table->foreign('trip_id')->references('id')->on('trips')->onDelete('cascade');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         });
     }
 

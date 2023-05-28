@@ -11,10 +11,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\Trip;
 use App\Models\Country;
+use Musonza\Chat\Traits\Messageable;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    use Messageable;
 
     public function trips(): HasMany
     {
@@ -41,6 +44,9 @@ class User extends Authenticatable
         'surname',
         'username',
         'email',
+        'languages',
+        'age',
+        'gender',
         'password',
         'origin_country_id',
         'social_id',

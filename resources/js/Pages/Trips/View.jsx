@@ -11,6 +11,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import UpdateTrip from '@/Components/UpdateTrip';
+import ShowTripFullDetails from '@/Components/ShowTripFullDetails';
 
 
   function Row(props) {
@@ -34,19 +35,19 @@ import UpdateTrip from '@/Components/UpdateTrip';
             </IconButton>
           </TableCell>
           <TableCell component="th" scope="row">
-            {row.city.name}
+          {row.country.name}
           </TableCell>
-          <TableCell align="right">{row.country.name}</TableCell>
-          <TableCell align="right">{row.start_date}</TableCell>
+          <TableCell align="right">{row.origin_country? row.origin_country.name: "Not provided"}</TableCell>
+          <TableCell align="right">{row.start_date ? row.start_date: "Not provided"}</TableCell>
           <TableCell align="right">{row.end_date}</TableCell>
-          <TableCell align="right">{row.description}</TableCell>
+          <TableCell align="right">{row.description ? row.description : "No description provided."}</TableCell>
         </TableRow>
         <TableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={open} timeout="auto" unmountOnExit>
               <Box sx={{ margin: 1 }}>
-                <UpdateTrip trip={row} countries={props.countries} />                
-
+                {/* <UpdateTrip trip={row} countries={props.countries} />                 */}
+                <ShowTripFullDetails trip={row} countries={props.countries} />
               </Box>
             </Collapse>
           </TableCell>
@@ -89,7 +90,7 @@ export default function AllTrips(props) {
           <TableRow>
             <TableCell />
             <TableCell>Destination</TableCell>
-            <TableCell align="right">Country</TableCell>
+            <TableCell align="right">Source country</TableCell>
             <TableCell align="right">Arrival date</TableCell>
             <TableCell align="right">Departure date</TableCell>
             <TableCell align="right">Description</TableCell>

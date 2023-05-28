@@ -23,7 +23,7 @@ class City extends Model
     }
 
     public function trips() {
-        return $this->hasMany(Trips::class);
+        return $this->hasMany(SubTrip::class);
     }
     
 }

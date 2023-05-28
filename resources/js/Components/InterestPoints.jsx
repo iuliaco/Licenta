@@ -20,13 +20,14 @@ export default function InterestPoints(props) {
     const [lat, setLat] = useState(42.35);
     const [zoom, setZoom] = useState(9);
     const [popupInfo, setPopupInfo] = useState(null);
+    const topPlaces = props.places.slice(0, 3);
     const pins = useMemo(
         () =>
-          interestPoints.map((pin, index) => (
+          props.places.map((pin, index) => (
             <Marker
               key={`marker-${index}`}
-              longitude={pin.geoCode.longitude}
-              latitude={pin.geoCode.latitude}
+              longitude={pin.geoCode.lon}
+              latitude={pin.geoCode.lat}
               anchor="bottom"
               onClick={e => {
                 // If we let the click event propagates to the map, it will immediately close the popup
@@ -68,18 +69,7 @@ export default function InterestPoints(props) {
         router.get(route('add.trip.form'))
     }
     return (
-        <Layout
-            auth = {props.auth}
-        >
-            <>
-            <Box
-          component="main"
-          sx={{
-            flexGrow: 1,
-            py: 8
-          }}
-        >
-             
+             <Box mt={5}>
             <Container maxWidth="lg">
                 <Stack spacing={3}>
                     <div>
@@ -89,7 +79,7 @@ export default function InterestPoints(props) {
                     </div>
                 </Stack>
 
-                <Card  sx={{maxWidth:{xs:"100%", md:"80%"}, pt:3, borderRadius: 5 , display:"flex", flexDirection:{xs:"column", md:"row"}}}>
+                {topPlaces.map((place, index) =>  <Card key={index}  sx={{maxWidth:{xs:"100%", md:"80%"}, pt:3, borderRadius: 5 , display:"flex", flexDirection:{xs:"column", md:"row"}}}>
                     <CardMedia
                         component="img"
                         image={travelPicture}
@@ -103,26 +93,23 @@ export default function InterestPoints(props) {
                     sx={{ mb: 1 }}
                     >
                     <Typography  variant="h5">
-                        Palatul Schonburnn
+                        {place.name}
                     </Typography>
                     <Typography variant="body1">
-                        Category: Restaurant
+                        Category: {place.category}
                     </Typography>
                     </Stack>
 
                     <Container sx={{ mt:"auto"}}>
-                    <Chip label="Chip Outlined" variant="outlined" sx={{ m:0.25}}/>
-                    <Chip label="Chip Outlined" variant="outlined" sx={{ m:0.25}} />
-                    <Chip label="Chip Outlined" variant="outlined" sx={{ m:0.25}} />
-                    <Chip label="Chip Outlined" variant="outlined" sx={{ m:0.25}} />
-                    <Chip label="Chip Outlined" variant="outlined" sx={{ m:0.25}} />
-                    <Chip label="Chip Outlined" variant="outlined" sx={{ m:0.25}} />
+                    {place.description && <Typography variant="body2"> {place.description} </Typography> }
+                    {place.rating && <Typography variant="body2"> Rating: {place.rating}/10 </Typography> }
+                    {place.address && <Typography variant="body2"> Address: {place.address} </Typography> }
                     </Container>
                     
                     </CardContent>
                 </Box>
                     
-                </Card>
+                </Card>)} 
 
             </Container>
             <Container maxWidth="lg">
@@ -143,8 +130,8 @@ export default function InterestPoints(props) {
                  
                 <Map
                 initialViewState={{
-                longitude: interestPoints[0].geoCode.longitude,
-                latitude: interestPoints[0].geoCode.latitude,
+                longitude: interestPoints[0].geoCode.lon,
+                latitude: interestPoints[0].geoCode.lat,
                 zoom: 12
                 }}
                 mapStyle="mapbox://styles/mapbox/streets-v9"
@@ -183,10 +170,8 @@ export default function InterestPoints(props) {
                 </Map>
            </Box> 
             </Box>
-            </>    
-
          
-        </Layout>
+       
 
     );
 }

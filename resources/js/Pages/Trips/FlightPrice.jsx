@@ -28,7 +28,7 @@ export default function CountrySafety(props) {
                         </Typography>
                     </div>
 
-                    <CountryAirportForm countries={props.countries} />
+                    <CountryAirportForm {...props}/>
                 </Stack>
             </Container>
 

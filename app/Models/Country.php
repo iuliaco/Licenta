@@ -28,7 +28,11 @@ class Country extends Model
     }
     
     public function trips() {
-        return $this->hasMany(Trips::class);
+        return $this->hasMany(Trips::class, "country_id");
+    }
+
+    public function departureTrips() {
+        return $this->hasMany(Trips::class, "origin_country_id");
     }
 
 }

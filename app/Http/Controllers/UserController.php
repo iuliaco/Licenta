@@ -99,6 +99,28 @@ class UserController extends Controller
 
     }
 
+        /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function uploadAvatar(Request $request)
+    {
+        $request->validate([
+            'avatar' => 'required|file|mimes:jpeg,png|max:2048',
+        ]);
+        
+        $avatarName = auth()->user()->id.'_avatar'.time().'.'.request()->avatar->getClientOriginalExtension();
+        $user = User::find(Auth::user()->id);
+        $user-> profile_photo_url = $avatarName;
+        $user->save();
+        $request->avatar->storeAs('public/avatars',$avatarName);
+
+        return redirect(RouteServiceProvider::HOME);
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *

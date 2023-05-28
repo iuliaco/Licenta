@@ -17,17 +17,19 @@ class CitySeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get("cities.json");
+        $json = File::get("output.json");
         $countries = json_decode($json);
         $data = json_decode($json, true);
         foreach ($data as $country => $cities) {
-            $countryId = Country::where('name', $country)->first();
+            $countryId = Country::where('code', $country)->first();
             print($country);
 
             foreach ($cities as $cityName) {
                 City::create([
-                    "name" => $cityName,
-                    "country_id" => $countryId->id
+                    "name" => $cityName["city"],
+                    "country_id" => $countryId->id,
+                    "lat" => $cityName["lat"],
+                    "lon" => $cityName["lng"]
                 ]);
 
             }

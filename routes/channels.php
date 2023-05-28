@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Broadcast;
-
+use Illuminate\Support\Facades\Log;
 /*
 |--------------------------------------------------------------------------
 | Broadcast Channels
@@ -15,4 +15,18 @@ use Illuminate\Support\Facades\Broadcast;
 
 Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
+});
+
+Broadcast::channel('presence-mc-chat-conversation.{conversationId}', function ($user) {
+    return ['id' => $user->id, 'name' => $user->name];
+});
+
+Broadcast::channel('mc-chat-conversation.{conversationId}', function ($user) {
+    Log::info("Channel pt ".$user->id);
+    return true;
+});
+
+Broadcast::channel('private-mc-chat-conversation.{conversationId}', function ($user) {
+    Log::info("Channel pt ".$user->id);
+    return true;
 });

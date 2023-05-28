@@ -41,9 +41,12 @@ class PostController extends Controller
             'title' => ['required'],
             'body' => ['required'],
         ])->validate();
-  
-        Post::create($request->all());
-  
+
+        $post = new Post();
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->user_id = auth()->user()->id; 
+            
         return redirect()->route('posts.index');
     }
 

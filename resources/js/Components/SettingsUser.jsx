@@ -18,6 +18,9 @@ export const SettingsUser = (props) => {
     surname: props.user.surname,
     username: props.user.username,
     origin_country_id: props.user.origin_country.id,
+    languages: props.user.languages,
+    age: props.user.age,
+    gender: props.user.gender,
 });
 
 

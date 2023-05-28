@@ -47,4 +47,11 @@ return [
         'api_key' => env('AMADEUS_API_KEY'),
         'api_secret' => env('AMADEUS_API_SECRET'),
       ], 
+      'foursquare' => [
+        'api_key' => env('FOURSQUARE_API_KEY'),
+      ],
+      'unsplash' => [
+        'access_key' => env('UNSPLASH_ACCESS_KEY'),
+        'secret_key' => env('UNSPLASH_SECRET_KEY'),
+      ]
 ];

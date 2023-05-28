@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('username');
+            $table->string("languages")->nullable();
+            $table->string("phone_number")->nullable();
+            $table->integer('age')->nullable();
+            $table->integer('gender')->nullable();
             $table->unsignedBigInteger('origin_country_id')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

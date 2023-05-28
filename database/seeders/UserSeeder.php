@@ -20,8 +20,16 @@ class UserSeeder extends Seeder
             "name" => "Test",
             "surname" => "Test",
             "username" => "test",
-            "origin_country_id" => 180,
+            "origin_country_id" => 179,
             "email" => "admin@gmail.com",
+            "password" => bcrypt("testtest")
+        ]);
+        User::create([
+            "name" => "Test",
+            "surname" => "Test",
+            "username" => "test2",
+            "origin_country_id" => 179,
+            "email" => "admin2@gmail.com",
             "password" => bcrypt("testtest")
         ]);
     }

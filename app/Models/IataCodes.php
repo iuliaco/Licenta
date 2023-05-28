@@ -23,6 +23,17 @@ class IataCodes extends Model
      * @var array
      */
 
+     public function departingTrips()
+     {
+         return $this->hasMany(Trip::class, 'departure_airport_id');
+     }
+ 
+     public function returningTrips()
+     {
+         return $this->hasMany(Trip::class, 'returning_airport_id');
+     }
+
+
     protected $fillable = [
         'name', 'iata_code','status', 'iso_code', 'continent', 'size', 'lat', 'lon'
     ];

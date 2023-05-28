@@ -71,7 +71,34 @@ export const items = [
         <CogIcon />
       </SvgIcon>
     )
-  }
+  },
+  {
+    title: 'Profile',
+    path: '/profile',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UserIcon />
+      </SvgIcon>
+    )
+  },
+  {
+    title: 'Messages',
+    path: '/messages',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UserIcon />
+      </SvgIcon>
+    )
+  },
+  {
+    title: 'User Reviews',
+    path: '/reviews',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UserIcon />
+      </SvgIcon>
+    )
+  },
   // {
   //   title: 'Login',
   //   path: '/login',
