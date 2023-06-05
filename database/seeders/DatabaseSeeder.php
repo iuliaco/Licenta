@@ -8,6 +8,7 @@ use Database\Seeders\CountrySeeder;
 use Database\Seeders\IataSeeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\CitySeeder;
+use Database\Seeders\TripsTableSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -28,7 +29,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CountrySeeder::class,
             IataSeeder::class,
-            CitySeeder::class
+            CitySeeder::class,
+            TripsTableSeeder::class,
         ]);
    
     }

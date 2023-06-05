@@ -17,19 +17,27 @@ class UserSeeder extends Seeder
     {
         //
         User::create([
-            "name" => "Test",
-            "surname" => "Test",
-            "username" => "test",
+            "name" => "Corcodel",
+            "surname" => "Iulia",
+            "username" => "iuliaco",
             "origin_country_id" => 179,
-            "email" => "admin@gmail.com",
+            "email" => "iuliaco2001@gmail.com",
             "password" => bcrypt("testtest")
         ]);
         User::create([
-            "name" => "Test",
-            "surname" => "Test",
-            "username" => "test2",
+            "name" => "Isar",
+            "surname" => "Ioana",
+            "username" => "ioanai",
             "origin_country_id" => 179,
-            "email" => "admin2@gmail.com",
+            "email" => "ioanaisar0@gmail.com",
+            "password" => bcrypt("testtest")
+        ]); 
+        User::create([
+            "name" => "Pricop",
+            "surname" => "Razvan",
+            "username" => "razzvy2023",
+            "origin_country_id" => 179,
+            "email" => "razvan.pricop@protonmail.com",
             "password" => bcrypt("testtest")
         ]);
     }

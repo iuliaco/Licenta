@@ -45,7 +45,7 @@ class MessagesController extends Controller
           ->toArray()['data'];
         $conversations = Arr::pluck($conversations, 'conversation_id');
         
-
+        // dd(Chat::conversation($conversation)->setParticipant($otherUser)->getMessages());
         $data = [
             'conversations' => array_map('intval', $conversations),
             'participant' => [
@@ -54,6 +54,7 @@ class MessagesController extends Controller
             ],
             'principal_conversation' => $conversation->id
         ];
+        // dd($data);
 
         return Inertia::render('Messages/View', ['conversations' => $data]);
         

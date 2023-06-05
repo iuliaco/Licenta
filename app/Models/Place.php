@@ -17,6 +17,7 @@ class Place extends Model
         'address',
         'rating',
         'city_id',
+        'photoUrl',
     ];
 
     protected $casts = [

@@ -21,8 +21,8 @@ function Information() {
                 <Box mb={5}>
                   <DefaultInfoCard
                     icon={<SafetyCheckIcon />}
-                    title="Safety first"
-                    description="One of the biggest concerns for solo travelers is safety. With our platform, you can rest assured that every city you visit has been thoroughly vetted for safety, providing you with valuable peace of mind as you explore."
+                    title="Best Flight Deals"
+                    description="We keep an eye on the trends, compare rates across multiple airlines, and alert you when prices drop. This means you can confidently book your flights, knowing that you're getting the most value for your money."
                   />
                 </Box>
               </Grid>

@@ -26296,6 +26296,125 @@
       "lng": "-0.1275",
       "iso2": "GB",
       "capital": "primary"
+    },
+    {
+      "city": "Birmingham",
+      "lat": "52.4800",
+      "lng": "-1.9025",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Manchester",
+      "lat": "53.4794",
+      "lng": "-2.2453",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Liverpool",
+      "lat": "53.4075",
+      "lng": "-2.9919",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Southampton",
+      "lat": "50.9025",
+      "lng": "-1.4042",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Leeds",
+      "lat": "53.8003",
+      "lng": "-1.5497",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Nottingham",
+      "lat": "52.9533",
+      "lng": "-1.1500",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Glasgow",
+      "lat": "55.8611",
+      "lng": "-4.2500",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Bristol",
+      "lat": "51.4536",
+      "lng": "-2.5975",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Sheffield",
+      "lat": "53.3808",
+      "lng": "-1.4703",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Edinburgh",
+      "lat": "55.9533",
+      "lng": "-3.1892",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Belfast",
+      "lat": "54.5964",
+      "lng": "-5.9300",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Aberdeen",
+      "lat": "57.1500",
+      "lng": "-2.1100",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Oxford",
+      "lat": "51.7519",
+      "lng": "-1.2578",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Brighton",
+      "lat": "50.8208",
+      "lng": "-0.1375",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Cambridge",
+      "lat": "52.2053",
+      "lng": "0.1192",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Bath",
+      "lat": "51.3800",
+      "lng": "-2.3600",
+      "iso2": "GB",
+      "capital": "admin"
+    },
+    {
+      "city": "Inverness",
+      "lat": "57.4778",
+      "lng": "-4.2247",
+      "iso2": "GB",
+      "capital": "admin"
     }
   ],
   "FR": [
@@ -62384,13 +62503,6 @@
       "lng": "34.8625",
       "iso2": "IL",
       "capital": "admin"
-    },
-    {
-      "city": "Gaza",
-      "lat": "31.5069",
-      "lng": "34.4560",
-      "iso2": "XG",
-      "capital": "primary"
     }
   ],
   "MN": [
@@ -64162,265 +64274,6 @@
       "lat": "-43.9514",
       "lng": "-176.5611",
       "iso2": "NZ",
-      "capital": "admin"
-    },
-    {
-      "city": "Pristina",
-      "lat": "42.6633",
-      "lng": "21.1622",
-      "iso2": "XK",
-      "capital": "primary"
-    },
-    {
-      "city": "Ferizaj",
-      "lat": "42.3667",
-      "lng": "21.1667",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Gjakov\u00eb",
-      "lat": "42.3833",
-      "lng": "20.4333",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Prizren",
-      "lat": "42.2128",
-      "lng": "20.7392",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Podujev\u00eb",
-      "lat": "42.9167",
-      "lng": "21.2000",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Mitrovic\u00eb",
-      "lat": "42.8833",
-      "lng": "20.8667",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Vushtrri",
-      "lat": "42.8222",
-      "lng": "20.9694",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Suharek\u00eb",
-      "lat": "42.3800",
-      "lng": "20.8219",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Gllogovc",
-      "lat": "42.6236",
-      "lng": "20.8939",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Lipjan",
-      "lat": "42.5300",
-      "lng": "21.1386",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Rahovec",
-      "lat": "42.3994",
-      "lng": "20.6547",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Gjilan",
-      "lat": "42.4647",
-      "lng": "21.4669",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Skenderaj",
-      "lat": "42.7467",
-      "lng": "20.7886",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Pej\u00eb",
-      "lat": "42.6603",
-      "lng": "20.2917",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Istog",
-      "lat": "42.7833",
-      "lng": "20.4833",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Klin\u00eb",
-      "lat": "42.6167",
-      "lng": "20.5667",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Kamenic\u00eb",
-      "lat": "42.5839",
-      "lng": "21.5750",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Dragash",
-      "lat": "42.0611",
-      "lng": "20.6528",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Fush\u00eb Kosov\u00eb",
-      "lat": "42.6300",
-      "lng": "21.1200",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Ka\u00e7anik",
-      "lat": "42.2467",
-      "lng": "21.2553",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Shtime",
-      "lat": "42.4333",
-      "lng": "21.0333",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Leposaviq",
-      "lat": "43.1000",
-      "lng": "20.8000",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Zve\u00e7an",
-      "lat": "42.9000",
-      "lng": "20.8333",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Zubin Potok",
-      "lat": "42.9167",
-      "lng": "20.6833",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Sht\u00ebrpc\u00eb",
-      "lat": "42.2333",
-      "lng": "21.0167",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Gra\u00e7anic\u00eb",
-      "lat": "42.6000",
-      "lng": "21.2000",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Hani i Elezit",
-      "lat": "42.1475",
-      "lng": "21.2992",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Novob\u00ebrd\u00eb",
-      "lat": "42.6000",
-      "lng": "21.4333",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Obiliq",
-      "lat": "42.6900",
-      "lng": "21.0778",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Junik",
-      "lat": "42.4761",
-      "lng": "20.2775",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Mamush\u00eb",
-      "lat": "42.3167",
-      "lng": "20.7167",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Ranillug",
-      "lat": "42.4920",
-      "lng": "21.5590",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Partesh",
-      "lat": "42.4019",
-      "lng": "21.4336",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "De\u00e7an",
-      "lat": "42.5333",
-      "lng": "20.2833",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Malishev\u00eb",
-      "lat": "42.4828",
-      "lng": "20.7461",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Kllokot",
-      "lat": "42.3667",
-      "lng": "21.3833",
-      "iso2": "XK",
-      "capital": "admin"
-    },
-    {
-      "city": "Viti",
-      "lat": "42.3214",
-      "lng": "21.3583",
-      "iso2": "XK",
       "capital": "admin"
     }
   ],
@@ -71936,78 +71789,6 @@
       "capital": "admin"
     }
   ],
-  "SD": [
-    {
-      "city": "Juba",
-      "lat": "4.8500",
-      "lng": "31.6000",
-      "iso2": "SD",
-      "capital": "primary"
-    },
-    {
-      "city": "Bor",
-      "lat": "6.2125",
-      "lng": "31.5608",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Wau",
-      "lat": "7.7000",
-      "lng": "28.0000",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Malakal",
-      "lat": "9.5500",
-      "lng": "31.6500",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Kuacjok",
-      "lat": "8.3100",
-      "lng": "27.9900",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Aweil",
-      "lat": "8.7800",
-      "lng": "27.4000",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Yambio",
-      "lat": "4.5650",
-      "lng": "28.3750",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Rumbek",
-      "lat": "6.8060",
-      "lng": "29.6760",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Torit",
-      "lat": "4.4081",
-      "lng": "32.5750",
-      "iso2": "SD",
-      "capital": "admin"
-    },
-    {
-      "city": "Bentiu",
-      "lat": "9.2600",
-      "lng": "29.8000",
-      "iso2": "SD",
-      "capital": "admin"
-    }
-  ],
   "LS": [
     {
       "city": "Maseru",
@@ -78177,7 +77958,6 @@
       "capital": "admin"
     }
   ],
-
   "MP": [
     {
       "city": "Capitol Hill",
@@ -78279,85 +78059,6 @@
       "lat": "-0.5477",
       "lng": "166.9209",
       "iso2": "NR",
-      "capital": "primary"
-    }
-  ],
-  "AI": [
-    {
-      "city": "The Valley",
-      "lat": "18.2167",
-      "lng": "-63.0500",
-      "iso2": "AI",
-      "capital": "primary"
-    }
-  ],
-  "WF": [
-    {
-      "city": "Mata-Utu",
-      "lat": "-13.2825",
-      "lng": "-176.1736",
-      "iso2": "WF",
-      "capital": "primary"
-    },
-    {
-      "city": "Leava",
-      "lat": "-14.2933",
-      "lng": "-178.1583",
-      "iso2": "WF",
-      "capital": "admin"
-    }
-  ],
-  "NF": [
-    {
-      "city": "Kingston",
-      "lat": "-29.0569",
-      "lng": "167.9617",
-      "iso2": "NF",
-      "capital": "primary"
-    }
-  ],
-  "PN": [
-    {
-      "city": "Adamstown",
-      "lat": "-25.0667",
-      "lng": "-130.0833",
-      "iso2": "PN",
-      "capital": "primary"
-    }
-  ],
-  "CX": [
-    {
-      "city": "Flying Fish Cove",
-      "lat": "-10.4167",
-      "lng": "105.7167",
-      "iso2": "CX",
-      "capital": "primary"
-    }
-  ],
-  "GS": [
-    {
-      "city": "King Edward Point",
-      "lat": "-54.2833",
-      "lng": "-36.5000",
-      "iso2": "GS",
-      "capital": "primary"
-    }
-  ],
-  "AW": [
-    {
-      "city": "Oranjestad",
-      "lat": "17.4833",
-      "lng": "-62.9833",
-      "iso2": "AW",
-      "capital": "admin"
-    }
-  ],
-  "VI": [
-    {
-      "city": "Charlotte Amalie",
-      "lat": "18.3420",
-      "lng": "-64.9331",
-      "iso2": "VI",
       "capital": "primary"
     }
   ]

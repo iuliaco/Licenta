@@ -34,11 +34,7 @@ return [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => 'http://127.0.0.1/callback/google',
-      ], 
-      'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://127.0.0.1/callback/google',
+        'api_key' => env('GOOGLE_API_KEY'),
       ], 
       'api_ninja' => [
         'api_key' => env('API_NINJA_API_KEY'),

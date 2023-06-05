@@ -64,6 +64,8 @@ export default function ViewMessages(props) {
   });
   const [messages, setMessages] = useState([]);
   const [lastMessage, setLastMessage] = useState();
+  const [nextPageUrl, setNextPageUrl] = useState('');
+  const [shouldScroll, setShouldScroll] = useState(true);
   const messagesEndRef = useRef(null)
 
   const handleChange = (event) => {
@@ -102,7 +104,6 @@ export default function ViewMessages(props) {
       setLastMessage(data.message);
       // //setMessages(messages => [...messages, data]);
     });
-    console.log(import.meta.env.VITE_PUSHER_APP_KEY);
   
     return () => {
       // Unsubscribe from the channel
@@ -111,21 +112,24 @@ export default function ViewMessages(props) {
   }
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    if(shouldScroll == true) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
   }
   useEffect(() => {
     scrollToBottom()
-  }, [messages]);
-
+  }, [messages, shouldScroll]);
   
   useEffect(() => {
     console.log(props);
     enablePusher();
-    axios.get(`/chat/conversations/${props.conversations.principal_conversation}/messages/?participant_id=${props.conversations.participant.id}&participant_type=${props.conversations.participant.type}`)
+    axios.get(`/chat/conversations/${props.conversations.principal_conversation}/messages/?participant_id=${props.conversations.participant.id}&participant_type=${props.conversations.participant.type}&sorting=desc`)
       .then(response => {
         // Handle the response data
-        setMessages(response.data.data);
-
+        setMessages(response.data.data.reverse());
+        if(response.data.next_page_url)
+          setNextPageUrl(response.data.next_page_url);
+        console.log(response.data);
         // Perform additional actions with the messages
       })
       .catch(error => {
@@ -134,10 +138,31 @@ export default function ViewMessages(props) {
   }, []);
 
   useEffect(() => {
-    if(lastMessage)
+    if(lastMessage) {
+      setShouldScroll(true);
       setMessages(messages => [...messages, lastMessage]);
+    }
     console.log(messages);
   }, [lastMessage]);
+
+  const loadMore = () => {
+      console.log("load more");
+      axios.get(nextPageUrl + `&participant_id=${props.conversations.participant.id}&participant_type=${props.conversations.participant.type}&sorting=desc`)
+        .then(response => {
+          // Handle the response data
+          setShouldScroll(false);
+          setMessages(messages => [...response.data.data.reverse(), ...messages]);
+          if(response.data.next_page_url)
+            setNextPageUrl(response.data.next_page_url);
+          else
+            setNextPageUrl(null);
+          console.log(response.data);
+          // Perform additional actions with the messages
+        })
+        .catch(error => {
+          // Handle the error
+        });
+  };
 
   return (
     <Layout auth={props.auth}>
@@ -196,6 +221,9 @@ export default function ViewMessages(props) {
                   //   },
                   }}
                 >
+                  {nextPageUrl && <Button fullWidth  onClick={loadMore}
+                      >Load More</Button>}
+                  
                   {messages.map((message, index) => (  
                     <MessageBox key={index} message={message} auth={props.auth}/>
                   ))}

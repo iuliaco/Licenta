@@ -58,10 +58,10 @@ export default function Welcome(props) {
                         variant="h1"
                         color="white"
                         >
-                        Travel solo, but never alone.
+                        Unleash Your Inner Explorer
                         </Typography>
                         <Typography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-                        We&apos;re constantly trying to express ourselves and actualize our dreams. Explore without limits or compromises.
+                        Step into a world of adventure and make every journey an unforgettable tale.
                         </Typography>
                     </Grid>
                 </Container>
@@ -79,7 +79,7 @@ export default function Welcome(props) {
             </Card>
             <Grid>
                 <Grid item container justifyContent="center" alignItems="center" my={4}>
-                &copy; SoloTravel
+                &copy; WanderWisdom
                 </Grid>
             </Grid>
             </Layout>

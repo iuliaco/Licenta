@@ -17,13 +17,13 @@ class CreatePlacesTable extends Migration
             $table->id();
             $table->json('geoCode');
             $table->string('name');
-            $table->string('category');
+            $table->string('category')->nullable();
+            $table->text('photoUrl')->nullable();
             $table->text("description")->nullable();
             $table->string("address")->nullable();
             $table->smallInteger("rating")->nullable();
             $table->unsignedBigInteger('city_id');
             $table->timestamps();
-
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         });
     }

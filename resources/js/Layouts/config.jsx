@@ -7,32 +7,37 @@ import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import { SvgIcon } from '@mui/material';
-
+import PlusCircleIcon from '@heroicons/react/24/solid/PlusCircleIcon';
+import ViewfinderCircleIcon from '@heroicons/react/24/solid/ViewfinderCircleIcon';
+import Bars3Icon from '@heroicons/react/24/solid/Bars3Icon';
+import InboxIcon from '@heroicons/react/24/solid/InboxIcon';
+import StarIcon from '@heroicons/react/24/solid/StarIcon';
+import ChatBubbleBottomCenterTextIcon from '@heroicons/react/24/solid/ChatBubbleBottomCenterTextIcon';
 export const items = [
   {
     title: 'Overview',
     path: '/dashboard',
     icon: (
     <SvgIcon fontSize="small">
-        <ChartBarIcon />
+        <ViewfinderCircleIcon />
       </SvgIcon>
     )
   },
-  {
-    title: 'Safety',
-    path: '/safety',
-    icon: (
-      <SvgIcon fontSize="small">
-        <UsersIcon />
-      </SvgIcon>
-    )
-  },
+  // {
+  //   title: 'Safety',
+  //   path: '/safety',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <UsersIcon />
+  //     </SvgIcon>
+  //   )
+  // },
   {
     title: 'Add a new trip',
     path: '/add-trip',
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <PlusCircleIcon />
       </SvgIcon>
     )
   },
@@ -41,7 +46,7 @@ export const items = [
     path: '/view-trips',
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <Bars3Icon />
       </SvgIcon>
     )
   },
@@ -59,7 +64,7 @@ export const items = [
     path: '/best-attractions',
     icon: (
       <SvgIcon fontSize="small">
-        <UserIcon />
+        <StarIcon />
       </SvgIcon>
     )
   },
@@ -86,7 +91,7 @@ export const items = [
     path: '/messages',
     icon: (
       <SvgIcon fontSize="small">
-        <UserIcon />
+        <InboxIcon />
       </SvgIcon>
     )
   },
@@ -95,7 +100,7 @@ export const items = [
     path: '/reviews',
     icon: (
       <SvgIcon fontSize="small">
-        <UserIcon />
+        <ChatBubbleBottomCenterTextIcon />
       </SvgIcon>
     )
   },

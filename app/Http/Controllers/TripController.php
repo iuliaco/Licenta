@@ -10,6 +10,7 @@ use App\Models\Trip;
 use App\Models\Country;
 use App\Models\SubTrip;
 use App\Models\Place;
+use Http;
 
 class TripController extends Controller
 {
@@ -80,6 +81,26 @@ class TripController extends Controller
         return Inertia::render('Trips/InterestPointsPage', ['countries' => $countries]);
     }
 
+    private function getGooglePlacePhotoUrl($placeName)
+{
+    $apiKey = config('services.google.api_key');
+
+    // Retrieve photo reference for the place
+    $placeDetailsUrl = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' . urlencode($placeName) . '&inputtype=textquery&fields=photos&key=' . $apiKey;
+    $placeDetailsResponse = Http::get($placeDetailsUrl);
+    $placeDetails = $placeDetailsResponse->json();
+
+    if (isset($placeDetails['candidates'][0]['photos'][0]['photo_reference'])) {
+        $photoReference = $placeDetails['candidates'][0]['photos'][0]['photo_reference'];
+
+        // Construct photo URL
+        $photoUrl = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' . $photoReference . '&key=' . $apiKey;
+
+        return $photoUrl;
+    }
+
+    return null;
+}
 
     public function storeInterestPoints(Request $request)
     {
@@ -109,7 +130,7 @@ class TripController extends Controller
 
               $responseContent = $response->getBody()->getContents();
               $jsonObject = json_decode($responseContent);
-              foreach($jsonObject->results as $result) {
+              foreach($jsonObject->results as $index => $result) {
                 $place = new Place();
                 $place->name = $result->name;
                 $place->setAttribute('geoCode->lat', $result->geocodes->main->latitude);
@@ -121,10 +142,16 @@ class TripController extends Controller
                 if(property_exists($result, 'location'))
                     if(property_exists($result->location, 'formatted_address'))
                         $place->address = $result->location->formatted_address;
-
-                $place->category = $result->categories[0]->name;
+                if(property_exists($result, 'categories') && count($result->categories) > 0)
+                    $place->category = $result->categories[0]->name;
                 $place->city_id = $request->city_id;
                 $place->save();
+
+                if ($index < 3) {
+                    $photoUrl = $this->getGooglePlacePhotoUrl($place->name);
+                    $place->photoUrl = $photoUrl;
+                    $place->save();
+                }
               }
         }
         $countries = Country::get();

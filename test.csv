@@ -273,7 +273,7 @@ Sanaa,15.3483,44.2064,YE,primary
 Meishan,30.0575,103.8381,CN,
 Incheon,37.4833,126.6333,KR,admin
 Guatemala City,14.6099,-90.5252,GT,primary
-Birmingham,52.4800,-1.9025,GB,
+Birmingham,52.4800,-1.9025,GB,admin
 Zhongshan,22.5333,113.3500,CN,minor
 Ningde,26.6617,119.5228,CN,minor
 Weihai,37.5000,122.1000,CN,minor
@@ -296,7 +296,7 @@ Guayaquil,-2.1900,-79.8875,EC,admin
 Lisbon,38.7253,-9.1500,PT,primary
 Longyan,25.0881,117.0244,CN,minor
 Tieling,42.2841,123.8365,CN,
-Manchester,53.4794,-2.2453,GB,
+Manchester,53.4794,-2.2453,GB,admin
 Baotou,40.6562,109.8345,CN,
 Handan,36.6116,114.4894,CN,minor
 Cawnpore,26.4499,80.3319,IN,
@@ -1016,11 +1016,11 @@ Ikeja,6.6186,3.3426,NG,admin
 Eskişehir,39.7767,30.5206,TR,admin
 Saltillo,25.4231,-100.9919,MX,admin
 Gaomi,36.3833,119.7500,CN,
-Liverpool,53.4075,-2.9919,GB,
+Liverpool,53.4075,-2.9919,GB,admin
 Ipoh,4.5972,101.0750,MY,admin
 Oran,35.6969,-0.6331,DZ,admin
 Portsmouth,50.8058,-1.0872,GB,
-Southampton,50.9025,-1.4042,GB,
+Southampton,50.9025,-1.4042,GB,admin
 Hermosillo,29.0989,-110.9542,MX,admin
 Cochabamba,-17.3833,-66.1667,BO,admin
 Weichanglu,37.1792,119.9333,CN,minor
@@ -1080,7 +1080,7 @@ El Paso,31.8476,-106.4300,US,
 Seyhan,36.9831,35.3328,TR,minor
 Niigata,37.9161,139.0364,JP,admin
 Hempstead,40.6629,-73.6089,US,
-Leeds,53.8003,-1.5497,GB,
+Leeds,53.8003,-1.5497,GB,admin
 Hamamatsu,34.7108,137.7275,JP,
 Bağcılar,41.0344,28.8564,TR,
 Xiangxiang,27.7389,112.5223,CN,
@@ -1093,7 +1093,7 @@ Lubango,-14.9167,13.5000,AO,admin
 Zouping,36.8625,117.7424,CN,
 Khŭjand,40.2833,69.6333,TJ,admin
 San Luis Potosí,22.1511,-100.9761,MX,admin
-Nottingham,52.9533,-1.1500,GB,
+Nottingham,52.9533,-1.1500,GB,admin
 Cencheng,22.9297,111.0186,CN,minor
 Dali,25.6808,100.3003,CN,
 Hamhŭng,39.9167,127.5333,KP,admin
@@ -1308,7 +1308,7 @@ Bhilai,21.3667,81.7167,IN,
 Mangalore,12.9020,74.8253,IN,
 Port-Bouët,5.2667,-3.9000,CI,
 Zhuangyuan,37.3056,120.8275,CN,minor
-Glasgow,55.8611,-4.2500,GB,
+Glasgow,55.8611,-4.2500,GB,admin
 Namangan,41.0011,71.6683,UZ,admin
 Ulyanovsk,54.3167,48.3667,RU,admin
 Tân An,10.9050,106.6994,VN,
@@ -1403,7 +1403,7 @@ Juiz de Fora,-21.7619,-43.3494,BR,
 Worcester,42.2705,-71.8079,US,
 Kolwezi,-10.7167,25.4667,CD,admin
 Chāpra,25.7848,84.7274,IN,
-Bristol,51.4536,-2.5975,GB,
+Bristol,51.4536,-2.5975,GB,admin
 Luofeng,37.3590,120.3960,CN,minor
 Lingyuan,41.2407,119.3957,CN,
 Irbid,32.5500,35.8500,JO,admin
@@ -1506,7 +1506,7 @@ Pohang,36.0322,129.3650,KR,minor
 Longzhou,30.3200,112.2300,CN,
 Anda,46.4078,125.3252,CN,minor
 Jinghong,22.0057,100.7948,CN,
-Sheffield,53.3808,-1.4703,GB,
+Sheffield,53.3808,-1.4703,GB,admin
 Utsunomiya,36.5551,139.8826,JP,admin
 Suez,29.9667,32.5500,EG,admin
 Nuremberg,49.4539,11.0775,DE,minor
@@ -1593,7 +1593,7 @@ Cheboksary,56.1333,47.2500,RU,admin
 Yuanping,38.7299,112.7134,CN,
 Toledo,41.6638,-83.5827,US,
 Yueqing,28.1188,120.9621,CN,
-Edinburgh,55.9533,-3.1892,GB,
+Edinburgh,55.9533,-3.1892,GB,admin
 Belgaum,15.8500,74.5000,IN,
 Tula,54.2000,37.6167,RU,admin
 Gdańsk,54.3475,18.6453,PL,admin
@@ -2120,7 +2120,7 @@ Tangdong,25.9755,113.2302,CN,minor
 Reading,51.4542,-0.9731,GB,
 Sambalpur,21.4700,83.9700,IN,
 Hangu,39.2320,117.7770,CN,
-Belfast,54.5964,-5.9300,GB,
+Belfast,54.5964,-5.9300,GB,admin
 Shah Latif Town,24.8806,67.1625,PK,
 Iwaki,37.0505,140.8877,JP,
 Salamanca,20.5703,-101.1972,MX,minor
@@ -3235,7 +3235,7 @@ Holon,32.0167,34.7667,IL,
 Kukawa,12.9167,13.5667,NG,minor
 Biysk,52.5333,85.2167,RU,
 Charleroi,50.4000,4.4333,BE,minor
-Aberdeen,57.1500,-2.1100,GB,
+Aberdeen,57.1500,-2.1100,GB,admin
 Deoghar,24.4800,86.7000,IN,
 La Guaira,10.6000,-66.9331,VE,admin
 Bīrjand,32.8667,59.2167,IR,admin
@@ -4064,7 +4064,7 @@ Horad Barysaw,54.2279,28.5050,BY,minor
 Regensburg,49.0167,12.0833,DE,minor
 Fredericksburg,38.2992,-77.4872,US,
 Jorhāt,26.7500,94.2200,IN,
-Oxford,51.7519,-1.2578,GB,
+Oxford,51.7519,-1.2578,GB,admin
 Neuss,51.2000,6.7000,DE,minor
 Hājīpur,25.6925,85.2084,IN,
 Caxias,-4.8589,-43.3558,BR,
@@ -4567,7 +4567,7 @@ Ağcabədi,40.0528,47.4614,AZ,admin
 Blitar,-8.1000,112.1500,ID,
 Târgu-Mureş,46.5456,24.5625,RO,admin
 Yuma,32.5995,-114.5491,US,
-Brighton,50.8208,-0.1375,GB,
+Brighton,50.8208,-0.1375,GB,admin
 Toowoomba,-27.5667,151.9500,AU,
 Tobruk,32.0761,23.9614,LY,admin
 Srīpur,24.2011,90.4843,BD,
@@ -4836,7 +4836,7 @@ Leiria,39.7500,-8.8000,PT,admin
 Larache,35.1833,-6.1500,MA,
 Navadwīp,23.4088,88.3657,IN,
 Latina,41.4672,12.9036,IT,minor
-Cambridge,52.2053,0.1192,GB,
+Cambridge,52.2053,0.1192,GB,admin
 Ünye,41.1333,37.2833,TR,minor
 San Fernando,16.6200,120.3200,PH,admin
 Exeter,50.7256,-3.5269,GB,
@@ -6011,7 +6011,7 @@ San Ramón,-33.5333,-70.6417,CL,
 Yashio,35.8225,139.8392,JP,
 Herẕliyya,32.1653,34.8458,IL,
 Catarman,12.4994,124.6328,PH,admin
-Bath,51.3800,-2.3600,GB,
+Bath,51.3800,-2.3600,GB,admin
 Janakpur,26.7286,85.9250,NP,admin
 Tenancingo,18.9608,-99.5906,MX,minor
 San Fernando,36.4667,-6.2000,ES,
@@ -7293,7 +7293,7 @@ Jbaïl,34.1236,35.6511,LB,minor
 Strood,51.3930,0.4780,GB,
 Luleå,65.5844,22.1539,SE,admin
 Couva,10.4167,-61.4500,TT,admin
-Inverness,57.4778,-4.2247,GB,
+Inverness,57.4778,-4.2247,GB,admin
 Waterford,52.2567,-7.1292,IE,admin
 Figueras,42.2667,2.9650,ES,
 San Felíu de Llobregat,41.3833,2.0439,ES,

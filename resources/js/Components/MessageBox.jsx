@@ -36,6 +36,7 @@ import SendIcon from "@mui/icons-material/Send";
 import SendMessage from "@/Components/SendMessage";
 import ConversationList from "@/Components/ConversationList";
 import axios from "axios";
+import moment from "moment";
 
 export default function MessageBox(props) {
 
@@ -43,6 +44,8 @@ export default function MessageBox(props) {
     const mr = props.message.sender.id == props.auth.user.id ? 0 : 4;
     const ml = props.message.sender.id == props.auth.user.id ? 4 : 0;
     const name = props.message.sender.id == props.auth.user.id ? "Me" : props.message.sender.name;
+    const date = moment(props.message.created_at);
+    const formattedDate = date.format('dddd, MMMM Do YYYY, h:mm a');
 
     useEffect(() => {
         console.log(props);
@@ -61,6 +64,7 @@ export default function MessageBox(props) {
           </Avatar>
         </Box>
         <Box  ml={2}>
+          <Box>
           <Paper elevation={5}>
             <Box my={1} px={2} pt={1}>
               <Link href={`/profile/${props.message.sender.id}`}>{name}</Link>
@@ -71,8 +75,9 @@ export default function MessageBox(props) {
               </Typography>
             </Box>
           </Paper>
-          <Box container  display="flex" sx={{flexDirection: dir}}>
-            <Typography variant="subtitle2">4 days ago</Typography>
+          </Box>
+          <Box container  sx={{flexDirection: dir}}>
+            <Typography variant="subtitle2">{formattedDate}</Typography>
           </Box>
         </Box>
       </Stack>

@@ -65,6 +65,7 @@ function StarRating(props) {
   });
   return (
     <>
+    <Stack spacing={2}>
       <Typography variant="h5">Wonderful, you did it!</Typography>
       <Typography variant="h6">Rate your recent trip!</Typography>
       <Box
@@ -120,6 +121,7 @@ function StarRating(props) {
         onChange={(event) => props.handleChange(event, props.index)}
         helperText="Tell us what you disliked about the trip"
       />
+      </Stack>
     </>
   );
 }
@@ -150,10 +152,17 @@ export default function AddSubTripForm({
       <Card>
         <Divider />
         <CardContent>
-          <Stack spacing={3} sx={{ maxWidth: 400 }}>
+          <Grid container>
             <MapsButton message={"Need help with accomodation or transportation?"} link={"https://www.google.com/maps/place/"} country={cities.find((c) => c.id === data.city_id)? cities.find((c) => c.id === data.city_id).name : ''} 
             
             />
+             <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            >
             <TextField
               id="outlined-select-origin-country"
               select
@@ -170,7 +179,22 @@ export default function AddSubTripForm({
                 </MenuItem>
               ))}
             </TextField>
+            </Grid>
+            <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            ></Grid>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            >
               <DatePicker
                 onChange={(event) => handleChangeArrivalDate(event, index)}
                 name="start_date"
@@ -183,6 +207,14 @@ export default function AddSubTripForm({
                   },
                 }}
               />
+              </Grid>
+              <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            >
               <DatePicker
                 onChange={(event) => handleChangeDepartureDate(event, index)}
                 name="end_date"
@@ -196,8 +228,15 @@ export default function AddSubTripForm({
                   },
                 }}
               />
+              </Grid>
             </LocalizationProvider>
-
+            <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            >
             <TextField
               id="outlined-multiline-flexible"
               sx={{ p: 0, m: 0 }}
@@ -209,7 +248,14 @@ export default function AddSubTripForm({
               onChange={(event) => handleChange(event, index)}
               helperText="At what hotel are you staying?"
             />
-
+            </Grid>
+            <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            >
             <TextField
               id="outlined-multiline-flexible"
               sx={{ p: 0, m: 0 }}
@@ -221,7 +267,14 @@ export default function AddSubTripForm({
               onChange={(event) => handleChange(event, index)}
               helperText="How do you want to travel in the city?"
             />
-
+            </Grid>
+            <Grid
+              container
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={6}
+            >
             <TextField
               id="outlined-multiline-flexible"
               sx={{ p: 0, m: 0 }}
@@ -233,7 +286,13 @@ export default function AddSubTripForm({
               onChange={(event) => handleChange(event, index)}
               helperText="Tell us more about your trip, why you're going, what you want to see"
             />
+            </Grid>
             {pastTrip && (
+              <Grid ontainer
+              flexDirection={"column"}
+              mt={2}
+              xs={12}
+              md={12}>
               <StarRating
                 rated={data.rated}
                 setData={setData}
@@ -243,10 +302,11 @@ export default function AddSubTripForm({
                 handleChangeRating={handleChangeRating}
                 handleChange={(event) => handleChange(event, index)}
               />
+              </Grid>
             )}
 
             {/* <ValidationErrors errors={errors} /> */}
-          </Stack>
+          </Grid>
         </CardContent>
         <Divider />
       </Card>

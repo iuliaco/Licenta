@@ -46,6 +46,7 @@ export default function ConversationItem(props) {
       )
       .then((response) => {
         // Handle the response data
+        console.log(response.data);
         setLastMessage(response.data.data ? response.data.data[0] : null);
       })
       .catch((error) => {
@@ -100,7 +101,7 @@ export default function ConversationItem(props) {
           }
           secondary={
             <>
-              {lastMessage.body
+              {lastMessage && lastMessage.body
                 ? lastMessage.body.length > 20
                   ? `${lastMessage.body.substring(0, 20)}...`
                   : lastMessage.body

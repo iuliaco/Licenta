@@ -20,7 +20,7 @@ export default function InterestPoints(props) {
     const [lat, setLat] = useState(42.35);
     const [zoom, setZoom] = useState(9);
     const [popupInfo, setPopupInfo] = useState(null);
-    const topPlaces = props.places.slice(0, 3);
+    let topPlaces = props.places.slice(0, 3);
     const pins = useMemo(
         () =>
           props.places.map((pin, index) => (
@@ -32,9 +32,10 @@ export default function InterestPoints(props) {
               onClick={e => {
                 // If we let the click event propagates to the map, it will immediately close the popup
                 // with `closeOnClick: true`
-                console.log(pin);
                 e.originalEvent.stopPropagation();
                 setPopupInfo(pin);
+                console.log(pin);
+
               }}
             >
               <Pin />
@@ -65,6 +66,10 @@ export default function InterestPoints(props) {
     });
     });
 
+    useEffect(() => {
+        console.log(popupInfo);
+    }, [popupInfo]);
+
     function handleClick() {
         router.get(route('add.trip.form'))
     }
@@ -82,9 +87,9 @@ export default function InterestPoints(props) {
                 {topPlaces.map((place, index) =>  <Card key={index}  sx={{maxWidth:{xs:"100%", md:"80%"}, pt:3, borderRadius: 5 , display:"flex", flexDirection:{xs:"column", md:"row"}}}>
                     <CardMedia
                         component="img"
-                        image={travelPicture}
+                        image={place.photoUrl}
                         alt="Travel picture"
-                        sx={{maxWidth:{xs:"100%", md:"40%"}}}
+                        sx={{maxWidth:{xs:"100%", md:"40%", padding: "1em 1em 0 1em", objectFit: "cover" , height:"17rem"}}}
                     />
                     <Box sx={{minWidth:{xs:"100%", md:"60%"}, display:"flex" , direction:"row", pb:0}}>
                     <CardContent sx={{ display:"flex", flexDirection:"column",maxWidth:"100%", py:1}}>
@@ -96,8 +101,9 @@ export default function InterestPoints(props) {
                         {place.name}
                     </Typography>
                     <Typography variant="body1">
-                        Category: {place.category}
+                        Category: {place.category ? place.category : "No category available"}
                     </Typography>
+                    
                     </Stack>
 
                     <Container sx={{ mt:"auto"}}>
@@ -130,24 +136,20 @@ export default function InterestPoints(props) {
                  
                 <Map
                 initialViewState={{
-                longitude: interestPoints[0].geoCode.lon,
-                latitude: interestPoints[0].geoCode.lat,
+                longitude: props.places[0].geoCode.lon,
+                latitude: props.places[0].geoCode.lat,
                 zoom: 12
                 }}
                 mapStyle="mapbox://styles/mapbox/streets-v9"
                 style={{width: '75vw', height: '70vh'}}
                 >
-                {interestPoints.map((pin, index) => {
-                <Marker key={`marker-${index}`} longitude={pin.geoCode.longitude} latitude={pin.geoCode.latitude}>
-                <Pin size={20} onClick={() => setSelectedPin(pin)} />
-                </Marker>
-                })}
+               
                 {pins}
                 {popupInfo && (
                     <Popup
                         anchor="top"
-                        longitude={Number(popupInfo.geoCode.longitude)}
-                        latitude={Number(popupInfo.geoCode.latitude)}
+                        longitude={Number(popupInfo.geoCode.lon)}
+                        latitude={Number(popupInfo.geoCode.lat)}
                         onClose={() => setPopupInfo(null)}
                     >
                         <Box>
@@ -156,12 +158,12 @@ export default function InterestPoints(props) {
                         {popupInfo.name}
                         </Typography>
                         <Typography variant="subtitle2">
-                        Category: {popupInfo.category}
+                        Category: {popupInfo.category ? popupInfo.category : "No category available"}
                         </Typography>
                         <Box sx={{ mt:"auto", px:0}}>
-                            {popupInfo.tags.map((tag, index) => (
-                                <Chip key={`chip-${index}`} label={tag} variant="outlined" sx={{ m:0.25}}/>
-                            ))}
+                            {popupInfo.description && <Typography variant="body2"> {popupInfo.description} </Typography> }
+                            {popupInfo.rating && <Typography variant="body2"> Rating: {popupInfo.rating}/10 </Typography> }
+                            {popupInfo.address && <Typography variant="body2"> Address: {popupInfo.address} </Typography> }
                         </Box>
                         </Stack>
                         </Box>
