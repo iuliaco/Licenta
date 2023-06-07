@@ -5,6 +5,7 @@ import mapboxgl from 'mapbox-gl';
 import Map, {Marker, Popup} from 'react-map-gl';
 import Pin from '@/Components/Pin';
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { FacebookShareButton, FacebookIcon } from 'react-share';
 
 import {
   Card,
@@ -78,9 +79,15 @@ function FutureTrip({ futureTrips }) {
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
+                    <FacebookShareButton
+                      url={'http://google.com'}
+                      quote={'Check out this trip!'}
+                      hashtag="#trip"
+                    >
                       <Button size="small" color="primary">
                         Share
                       </Button>
+                      </FacebookShareButton>
                     </CardActions>
                   </Card>
                 </Grid>
@@ -205,9 +212,15 @@ function PastTrip({ pastTrips }) {
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
+                    <FacebookShareButton
+                      url={'http://google.com'}
+                      quote={'Check out this trip!'}
+                      hashtag="#trip"
+                    >
                       <Button size="small" color="primary">
                         Share
                       </Button>
+                      </FacebookShareButton>
                     </CardActions>
                   </Card>
                 </Grid>
