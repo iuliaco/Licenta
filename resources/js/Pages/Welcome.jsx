@@ -79,7 +79,7 @@ export default function Welcome(props) {
             </Card>
             <Grid>
                 <Grid item container justifyContent="center" alignItems="center" my={4}>
-                &copy; WanderWisdom
+                &copy; e-Travel
                 </Grid>
             </Grid>
             </Layout>
